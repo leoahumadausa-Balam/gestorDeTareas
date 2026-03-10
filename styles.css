@@ -1,0 +1,75 @@
+/* CSS personalizado para TaskMaster */
+body {
+    background-color: #f8f9fa;
+}
+
+#columna-pendiente,
+#columna-progreso,
+#columna-realizada {
+    min-height: 300px;
+    background-color: #e9ecef;
+}
+
+.card-header {
+    font-size: 1.1rem;
+    letter-spacing: 0.5px;
+}
+
+/* Efecto Flip 3D (Hover / JS trigger) */
+.flip-container {
+    perspective: 1000px;
+    /* Profundidad 3D */
+    margin-bottom: 0.5rem;
+}
+
+/* El card principal actúa como el eje de rotación */
+.flipper {
+    transition: 0.6s;
+    transform-style: preserve-3d;
+    position: relative;
+    width: 100%;
+    /* La altura depende de la cara más alta, daremos una base para que encaje 
+       pero se ajustará dinámicamente o dejaremos flex */
+    min-height: 100px;
+}
+
+/* Forzar la animación cuando se agregue la clase is-flipped mediante JS */
+.flip-container.is-flipped .flipper {
+    transform: rotateY(180deg);
+}
+
+.front,
+.back {
+    backface-visibility: hidden;
+    /* Ocultar el reverso de la cara girada */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    box-shadow: 0 .125rem .25rem rgba(0, 0, 0, .075);
+    /* Bootstrap shadow-sm */
+    border-radius: 0.375rem;
+    /* Bootstrap rounded */
+}
+
+/* La cara frontal tiene z-index alto inicialmente */
+.front {
+    z-index: 2;
+    transform: rotateY(0deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    text-align: center;
+}
+
+/* La tarjeta trasera ya está rotada 180deg oculta */
+.back {
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0.5rem;
+}
