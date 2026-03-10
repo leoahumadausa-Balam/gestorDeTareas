@@ -6,9 +6,9 @@ La herramienta permite a los usuarios gestionar sus tareas diarias en un tablero
 
 ## 📺 Demostración de la Aplicación
 
-*(Puedes ver un video con la demostración de la aplicación en funcionamiento directamente en GitHub usando el enlace a continuación)*
+*(A continuación puedes ver un video demostrativo de la aplicación en funcionamiento)*
 
-📹 **[Ver Video de Demostración](https://github.com/leoahumadausa-Balam/gestorDeTareas/issues/1#issue-4053446392)**
+https://github.com/user-attachments/assets/a2e2439e-389c-4a61-b375-4835787537bf
 
 ---
 
